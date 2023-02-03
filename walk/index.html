@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk</title>
+</head>
+
+<body style="background-color: #b9e2ed;">
+    <img id="walk" style="position: absolute; margin: 300px;" src="walk.gif" alt="">
+
+    <script>
+        let walk = document.getElementById("walk")
+        let x = 0
+        setInterval(() => {
+            walk.style.left = x + "px"
+            x += 1
+
+            // agar saat gif telah melebihi layar client maka akan reset ke awal ( optional tidak ada di soal cuma ya imrpovisasi )
+            if (x > document.body.clientWidth) x = -walk.clientWidth;
+        },0);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100% ;
+    display: grid;
+    grid-template-rows: 7% auto 7%; /* panjang baris */
+    grid-gap: 5px;
+}
+
+header {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2, 1fr); /* 2 item di header dengn ukuran 1fr */
+}
+
+.navs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.site-title {
+    background-color: rgb(255, 226, 34);
+}
+
+.nav1,
+.nav2,
+.nav3 {
+    background-color: pink;
+}
+
+main {
+    display: grid;
+    grid-template-areas: "post-title post-title sidebar"
+                         "post-meta main-content sidebar"
+                         "post-meta main-content ads"
+                         "post-meta main-content-img ads"
+                         "post-meta main-content-img ads"
+                         "post-meta main-content-img other";
+    grid-gap: 5px;
+}
+
+.post-title {
+    grid-area: post-title;
+    background-color: lightskyblue;
+}
+.post-meta {
+    grid-area: post-meta;
+    background-color: lightgreen;
+}
+.main-content {
+    grid-area: main-content;
+    background-color: rgb(213, 213, 213);
+}
+.main-content-img {
+    grid-area: main-content-img;
+    background-color: yellow;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: orange;
+}
+.ads {
+    grid-area: ads;
+    background-color: green;
+}
+.other {
+    grid-area: other;
+    background-color: palevioletred;
+}
+footer {
+    background-color: burlywood;
+}
